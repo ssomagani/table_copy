@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<deployment>
+    <cluster hostcount="1"/>
+    <httpd enabled="true">
+        <jsonapi enabled="true"/>
+    </httpd>
+    <snapshot enabled="false"/>
+    <commandlog enabled="true">
+        <frequency/>
+    </commandlog>
+    <export>
+	<configuration target="loopback" enabled="true" type="custom" 
+		exportconnectorclass="org.voltdb.exportclient.loopback.LoopbackExportClient">
+         <property name="procedure">CopyTables</property>
+         <property name="failurelogfile">/Users/seetasomagani/Documents/workspace_misc/table_copy/voltdbroot/lb.log</property>
+    </configuration>
+    </export>
+</deployment>
